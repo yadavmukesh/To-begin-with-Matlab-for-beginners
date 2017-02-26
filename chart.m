@@ -1,18 +1,24 @@
-%------------------------trial-1----------------------------------------
+%---------------------------------------trial-1----------------------------------------
 figure;
 pie([2.48049 1.51951]);
- 
-figure(2);
-pie([3 4 5]);
- 
-figure(3);
-pie([6 7 8]);
 colormap([
           0 1 0;      % green
           1 0 0;      % red
           %0 0 1      % blue
       ]) ; 
-%-------------------------trial-2---------------------------------------
+%---------------------------------------trial-1.1--------------------------------------
+figure(2);
+pie([3 4 5]);
+ 
+figure(3);
+pie([6 7 8]);
+
+colormap([
+          0 1 0;      % green
+          1 0 0;      % red
+          0 0 1      % blue
+      ]) ; 
+%-----------------------------------------trial-2---------------------------------------
 figure;
  labels = {'POSITIVE','NEGATIVE','NEUTRAL'};
  pie([1 2 3],labels);
@@ -27,7 +33,7 @@ figure;
  plot(x);
 set(gca,'Position',[left bottom width height])
 plot(y);
-%------------trial 3-bar graph---------------
+%-----------------------------------------trial 3-bar graph--------------------------------------------
  title('Bar Chart', 'fontsize', 15)
  x=[1 2 3];
  y=[3 4 5];
@@ -51,7 +57,7 @@ plot(y);
  xlabel('Positive  Negative  Neutral') % x-axis label
  
  print('BarPlot','-dpng')
-%-------------trial-4--pie chart--------------------
+%------------------------------------------trial-4--pie chart-------------------------------------------------
 set(gcf,'color','white','position', [0, 0, 200, 300])
 names = char('Positive', 'Negative', 'Neutral');
 title('Pie Chart for polarity', 'fontsize', 15);
