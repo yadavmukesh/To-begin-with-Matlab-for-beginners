@@ -1,3 +1,5 @@
+%%-----------------------------Sentence Separation by searching purna viram i.e. Hindi full stop---------------------------------
+%%-----------------------trial-1----by sending to Java API----------------------
 % % clc;
 % % clear all;
 % % close all;
@@ -6,7 +8,7 @@
 % %javaMethod('getSeparatedSentences3',x);
 % javaMethod('getSeperated3',x);
 
-%%--------------------sentence separation-------------------------
+%%-----------------trial-2-----------------------------------
 feature('DefaultCharacterSet', 'UTF8');
 
 opfile='D:\mukesh\project\code3\code3\sepsentences\output.txt';  % destination file
@@ -22,10 +24,10 @@ disp([10] * length(z)); % length
 x = char(y);
 %disp(char(x));
 
-x1 = strtrim(x); % removes blank row, another function: newChr = deblank(chr)
+x1 = strtrim(x); % removes blank row, another function: newChr = deblank(chr) %% trimming of string
 x2 = regexprep(x1, '\n\s+', '\n');
 x3 = regexprep(x2,'\s\n','\n');
-disp(char(x3));
+disp(char(x3));  %% sentence separated is displayed
 
 % x2 = regexprep(x1,'\s\n','\n');
 % disp(char(x2));
