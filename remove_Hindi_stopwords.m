@@ -1,3 +1,5 @@
+%%-----------------------Hindi stop words removal------------------------------
+%%------------------------trial-1----sending data to java API to do the process-----------------
 % % clc;
 % % clear all;
 % % close all;
@@ -5,8 +7,7 @@
 % x=RemoveStopwords3;
 % javaMethod('removestopwords',x);
 % %x=char(javaMethod('removestopwords',sample1));
-%%---------------------------old above----------------------
-%%--------------------stop words removal-------------------------
+%%---------------------------trial-2----------------------
 feature('DefaultCharacterSet', 'UTF8');
 
 opfile='D:\mukesh\project\code3\code3\stopwordout\output.txt';  % destination file
@@ -20,12 +21,12 @@ y=char(fread(file_id1, 'char'))';
 fclose(file_id1);
 
 %A = strsplit(y,'%s', 'delimiter', sprintf('\n'));
-A = strsplit(y,'\n');
+A = strsplit(y,'\n'); % split
 
 %x=regexprep(x,A, ' ');  % replace the stopwords with space
 for elem=A
     pat = strcat('\s', elem{1:end}, '\s');
-    x = regexprep(x, pat, ' ');
+    x = regexprep(x, pat, ' ');  % replace
      
 end;
 disp(char(x));
