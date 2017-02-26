@@ -1,5 +1,5 @@
-%% Approach 2.........Classification using HSWN only
-tic
+%% Text Classification having Devanagari script using Hindi-SentiWordNet only
+tic  %% starts clock count
 feature('DefaultCharacterSet', 'UTF8');
 
 global dictionary2;
@@ -127,4 +127,4 @@ if pos1==neg1
     disp('Neutral Document by polarity count');
 end
 disp('-------------------------------------------------');
-toc
+toc  %% stops clock count
