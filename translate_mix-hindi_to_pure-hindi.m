@@ -1,17 +1,19 @@
+%%----------------------------translation/replace mix-hindi word to pure hindi word------------------------------
+%%-----------------------trial-1-----send data to java API to do the process------------------------
 % feature('DefaultCharacterSet', 'UTF8');
 % x=Translation3;
 % javaMethod('translatetoHindi',x);
 
 
-%%--------------------translation-------------------------
+%%--------------------trial-2-------------------------
 feature('DefaultCharacterSet', 'UTF8');
 dictionary = containers.Map;
 
-file_id1=fopen('D:\mukesh\project\code3\code3\translation dictionary\Dictionary_en.txt');
+file_id1=fopen('D:\mukesh\project\code3\code3\translation dictionary\Dictionary_en.txt'); % mix-hindi file
 x=char(fread(file_id1, 'char'))'; 
 fclose(file_id1);
 
-file_id2=fopen('D:\mukesh\project\code3\code3\translation dictionary\Dictionary_hi.txt');
+file_id2=fopen('D:\mukesh\project\code3\code3\translation dictionary\Dictionary_hi.txt'); % pure hindi file
 y=char(fread(file_id2, 'char'))'; 
 fclose(file_id2);
 
